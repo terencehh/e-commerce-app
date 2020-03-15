@@ -1,2 +1,1 @@
-# e-commerce-app
-E-Commerce App Developed using React.js
+﻿E-Commerce App Developed using React.js
