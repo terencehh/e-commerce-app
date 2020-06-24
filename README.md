@@ -1,5 +1,7 @@
-﻿E-Commerce App Developed using React.js & Firebase. The App demonstrates senior level development techniques in React.js Projects, utilizing design patterns such as Observables & Higher-order components,
-alongside utilizing many technologies to improve scalability, performance, & development times.
+﻿E-Commerce App Developed using React.js & Firebase. 
+The App demonstrates senior level development approaches in React.js Projects, 
+utilizing design patterns such as Observables & Higher-order components, 
+as well as utilizing many technologies to improve scalability, performance, & development times. 
 App is implemented as a Progressive Web App & tested using Jest Library.
 Other Technologies used include:
 - SASS - Upgraded CSS which improves readability & code maintenance by writing CSS in a tree-like structure.
