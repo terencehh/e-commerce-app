@@ -2,7 +2,7 @@
 alongside utilizing many technologies to improve scalability, performance, & development times.
 App is implemented as a Progressive Web App & tested using Jest Library.
 Other Technologies used include:
-- SASS
+- SASS - Upgraded CSS which improves readability & code maintenance by writing CSS in a tree-like structure.
 - React Router
 - Redux
 - Stripe API
