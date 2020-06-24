@@ -1,39 +1,10 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-class App extends Component {
+import HomePage from './homepage.component';
 
-  constructor() {
-    super();
-
-    this.state = {
-      string: 'Hello Terence'
-    }
-  }
-
-  render() {
-    return (
-      <div className="App" >
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit {this.state.string} <code>src/App.js</code> and save to reload.
-          </p>
-          <button onClick={() => {
-            this.setState({ string: "Changed" })
-          }} >Change Text</button>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+function App() {
+  return <div><HomePage /></div>
 }
+
 export default App;
