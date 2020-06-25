@@ -1,6 +1,6 @@
 import React from 'react';
 import './menu-item.styles.scss';
-// we want to power up our menuItem component to have access to router information
+// we want to power up our menuItem component using a higher order function to give it access to router information
 import { withRouter } from 'react-router-dom';
 
 const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
@@ -16,5 +16,5 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
     </div>
   </div>
 )
-// returns a super powered menuItem component with access to location, match & history props of routing
+// HOF which takes a menuItem component and returns it now with access to location, match & history props of routing
 export default withRouter(MenuItem);
