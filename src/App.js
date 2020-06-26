@@ -18,9 +18,10 @@ class App extends Component {
     }
   }
 
+  // function reference which allows us to store a function to unsubscribe to a listener
   unsubscribeFromAuth = null;
 
-  // whenever any authentication change occurs in firebase, send a message on auth and handle changes to user state
+  // subscribe to a authStateChanged listener that fires whenever authentication status has changed in the app e.g. user signs in, registers, signs out. We can handle state changes when this happens
   componentDidMount() {
     console.log("Mounting")
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -48,7 +49,7 @@ class App extends Component {
     })
   }
 
-  // close the subscription on auth changes
+  // unsubscribe from the listener by calling the function returned from the listener upon component unmount.
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
