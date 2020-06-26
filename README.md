@@ -1,4 +1,4 @@
-﻿E-Commerce App Developed using React.js & Firebase. 
+﻿Full Stack E-Commerce App Developed using React.js & Firebase. 
 The App demonstrates senior level development approaches in React.js Projects, 
 utilizing design patterns such as Observables & Higher-order components, 
 as well as utilizing many technologies to improve scalability, performance, & development times. 
