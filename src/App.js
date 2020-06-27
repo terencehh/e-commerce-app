@@ -9,7 +9,7 @@ import ShopPage from './pages/shop/shop.component';
 import Header from './components/header/header.component'
 import LoginAndRegisterPage from './pages/login-and-register/login-and-register.component'
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
-import { setCurrentUser } from './redux/user/user-actions'
+import { setCurrentUser } from './redux/user/user.actions'
 
 
 class App extends Component {

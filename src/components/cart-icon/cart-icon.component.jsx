@@ -1,7 +1,7 @@
 import React from 'react';
 import './cart-icon.styles.scss';
 import { connect } from 'react-redux';
-import { toggleCartHidden } from '../../redux/cart/cart-actions';
+import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import { ReactComponent as CartSVG } from '../../assets/cart.svg';
 
 // cart Icon has a number icon indicating how many items are currently in cart
