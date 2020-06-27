@@ -6,7 +6,7 @@ App is implemented as a Progressive Web App & tested using Jest Library.
 Other Technologies used include:
 - SASS - Upgraded CSS which improves readability & code maintenance by writing CSS in a tree-like structure.
 - React Router
-- Redux
+- Redux - Allows for better state management by contextualizing entire app in terms of Actions, Reducers, Store, & Updates.
 - Stripe API
 - JSS
 - Redux-Saga

@@ -1,30 +1,32 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import './App.scss';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import Header from './components/header/header.component'
 import LoginAndRegisterPage from './pages/login-and-register/login-and-register.component'
-
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { setCurrentUser } from './redux/user/user-actions'
+
 
 class App extends Component {
-
-  constructor(props) {
-    super();
-    this.state = {
-      currentUser: null
-    }
-  }
 
   // function reference which allows us to store a function to unsubscribe to a listener
   unsubscribeFromAuth = null;
 
   // subscribe to a authStateChanged listener that fires whenever authentication status has changed in the app e.g. user signs in, registers, signs out. We can handle state changes when this happens
   componentDidMount() {
+
+    const { setCurrentUser } = this.props
+
+
     console.log("Mounting")
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+
+      console.log("userAuth is: ", userAuth)
 
       // if null means signing out or not authenticated
       if (userAuth) {
@@ -32,19 +34,15 @@ class App extends Component {
         const userRef = await createUserProfileDocument(userAuth)
         // send us a snapshot representing the data to allow us to check if a document exists, and also retrieve the data in JSON form
         userRef.onSnapshot(snapShot => {
-          this.setState({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data()
           })
         });
       }
       else {
         // set currentUser to null
-        this.setState({
-          currentUser: userAuth
-        })
+        setCurrentUser(null)
       }
     })
   }
@@ -58,7 +56,7 @@ class App extends Component {
     return (
       <div>
         {/* Ensure header is always present & rendered */}
-        <Header currentUser={this.state.currentUser} />
+        <Header />
         {/* Switch ensures that if multiple path matches, only renders first path */}
         <Switch>
           <Route exact path='/' component={HomePage} />
@@ -70,4 +68,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+
+})
+
+export default connect(null, mapDispatchToProps)(App);

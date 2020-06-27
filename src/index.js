@@ -3,16 +3,17 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+// wrap entire application into redux store provider
+import { Provider } from 'react-redux';
+import store from './redux/store'
 
 ReactDOM.render(
-  // component that enables all functionality of routing
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-  , document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  // Parent wrapper which allows all child components to access global redux store
+  <Provider store={store}>
+    { /* component that enables all functionality of routing */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('root')
+);
