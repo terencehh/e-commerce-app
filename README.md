@@ -13,3 +13,4 @@ Other Technologies used include:
 - React Hooks
 - Context API
 - GraphQL
+- Local Storage & Session Storage
