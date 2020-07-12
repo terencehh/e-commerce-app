@@ -8,8 +8,8 @@ import { createSelector } from 'reselect';
 // object which matches a string value to its respective ID number
 const COLLECTION_ID_MAP = {
   hats: 1,
-  sneakers: 2,
-  jackers: 3,
+  jackets: 2,
+  sneakers: 3,
   womens: 4,
   mens: 5
 }
