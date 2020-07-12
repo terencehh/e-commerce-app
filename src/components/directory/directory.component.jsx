@@ -9,7 +9,7 @@ const Directory = ({ sections }) => (
   <div className="directory-menu">
     {
       // spread operator
-      this.state.sections.map(({ id, ...otherSectionProps }) => (
+      sections.map(({ id, ...otherSectionProps }) => (
         <MenuItem key={id} {...otherSectionProps} />
       ))
     }
