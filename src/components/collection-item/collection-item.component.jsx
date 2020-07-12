@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { addItemToCart } from '../../redux/cart/cart.actions';
 import './collection-item.styles.scss'
 
+// defines the layout of how a single shop item is layed out
 const CollectionItem = ({ item, addItemToCart }) => {
 
   // destructure item data passed in
