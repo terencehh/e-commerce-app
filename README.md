@@ -12,5 +12,5 @@ Other Technologies used include:
 - Redux-Saga
 - React Hooks
 - Context API
-- GraphQL
+- GraphQL + Apollo
 - Local Storage & Session Storage for maintaining shopping state
