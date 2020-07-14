@@ -2,14 +2,15 @@
   "name": "e-commerce-app",
   "version": "0.1.0",
   "engines": {
-    "node": "12.x",
-    "npm": "6.x"
+    "node": "13.2.0",
+    "npm": "6.13.1"
   },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "create-react-app": "^3.4.1",
     "firebase": "^7.16.0",
     "lodash.memoize": "^4.1.2",
     "node-sass": "^4.14.1",
