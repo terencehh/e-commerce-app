@@ -1,11 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
-// reusable css for different component styling
-const OptionContainerStyles = css`
-  padding: 10px 15px;
-  cursor: pointer;
-`;
 
 export const HeaderContainer = styled.div`
   height: 70px;
@@ -31,12 +25,7 @@ export const OptionsContainer = styled.div`
   justify-content: flex-end;
 `;
 
-// reuse styling for link component
 export const OptionLink = styled(Link)`
-  ${OptionContainerStyles}
-`;
-
-// reuse styling for div component
-export const OptionDiv = styled.div`
-  ${OptionContainerStyles}
+padding: 10px 15px;
+cursor: pointer;
 `;
