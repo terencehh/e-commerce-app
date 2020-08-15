@@ -1,13 +1,14 @@
 import React from 'react';
-import './homepage.styles.scss';
 import Directory from '../../components/directory/directory.component'
+
+import { HomePageContainer } from './homepage.styles.jsx';
 
 // only homepage component gets access to the history prop in routing
 // prop tunnelling is bad practice
 const HomePage = () => (
-  <div className="homepage">
+  <HomePageContainer>
     <Directory />
-  </div>
+  </HomePageContainer>
 );
 
 export default HomePage;
